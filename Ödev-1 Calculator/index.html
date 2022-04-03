@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .header{
+            border:5px solid black; 
+            width: 473px;
+        }
+        .title{
+            color:crimson; 
+            text-align: center;
+        }
+        .div{
+            width: 550px;
+        }
+        .table{
+            width: 450px; 
+            border:5px solid black;
+        }
+        .tabinput{
+            border:5px solid black;
+        }
+        #display{
+            width: 390px; 
+            height: 125px;  
+            font-size: 50px; 
+            border:2px solid black;
+        }
+        .numButton{
+            width: 130px; 
+            height: 130px; 
+            font-size: 50px; 
+            border:2px solid black;
+            cursor: pointer;
+        }
+        .numButton:hover{
+            transform: scale(1.1);
+        }
+        .sideButton:hover{
+            transform: scale(1.1);
+        }
+        .sideButton{
+            width: 65px; 
+            height: 130px; 
+            font-size: 50px; 
+            border:2px solid black;
+            cursor: pointer;
+        }
+        .restart{
+            width: 65px; 
+            height: 130px; 
+            font-size: 50px; 
+            border:2px solid black; 
+            color: crimson;
+            cursor: pointer;
+        }
+        .restart:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title" >Hesap Makinesi</h1>
+    </div>
+        <div class="div">
+        <form name="calculator">
+          <table class="tabinput">
+          <tr>
+          <td><input type="text" id="display"></td>    
+          <td><input type="button" value="C" onclick="calculator.display.value =''" class="restart"></td>
+          </tr>
+          </table>
+          <table class="table">
+            <tr>
+              <td><input type="button" value="1" onclick="calculator.display.value +='1'" class="numButton"></td>
+              <td><input type="button" value="2" onclick="calculator.display.value +='2'" class="numButton"></td>
+              <td><input type="button" value="3" onclick="calculator.display.value +='3'" class="numButton"></td>
+              <td><input type="button" value="/" onclick="calculator.display.value +='/'" class="sideButton"></td>
+            </tr>
+            <tr>
+              <td><input type="button" value="4" onclick="calculator.display.value +='4'" class="numButton"></td>
+              <td><input type="button" value="5" onclick="calculator.display.value +='5'" class="numButton"></td>
+              <td><input type="button" value="6" onclick="calculator.display.value +='6'" class="numButton"></td>
+              <td><input type="button" value="-" onclick="calculator.display.value +='-'" class="sideButton"></td>
+            </tr>
+            <tr>
+              <td><input type="button" value="7" onclick="calculator.display.value +='7'" class="numButton"></td>
+              <td><input type="button" value="8" onclick="calculator.display.value +='8'" class="numButton"></td>
+              <td><input type="button" value="9" onclick="calculator.display.value +='9'" class="numButton"></td>
+              <td><input type="button" value="+" onclick="calculator.display.value +='+'" class="sideButton"></td>
+            </tr>
+            <tr>
+              <td><input type="button" value="." onclick="calculator.display.value +='.'" class="numButton"></td>
+              <td><input type="button" value="0" onclick="calculator.display.value +='0'" class="numButton"></td>
+              <td><input type="button" value="=" onclick="equal()" class="numButton"></td>
+              <td><input type="button" value="*" onclick="calculator.display.value +='*'" class="sideButton"></td>
+            </tr>
+            <tr></tr>
+          </table>
+        </form>
+        </div>
+
+<script>
+    function equal() {
+        if(calculator.display.value === ""){
+        alert("Lütfen veri girisi yapiniz!");
+        } else if (calculator.display.value = eval(calculator.display.value)){
+           
+        }
+    }
+</script>
+</body>
+</html>
+
+
