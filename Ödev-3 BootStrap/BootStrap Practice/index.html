@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Practice</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  body {
+        background-image: linear-gradient(-45deg, rgb(138, 101, 71), rgba(255, 217, 0, 0.637), rgb(129, 94, 146), rgb(142, 165, 133));
+        position: relative;
+  }
+  .cardButtons {
+        background-color: rgb(196, 126, 196);
+  }
+  .login {
+        background-color: rgb(202, 172, 191);
+  }
+  #login {
+        background-image: linear-gradient(-45deg, rgb(27, 26, 25), rgba(160, 139, 20, 0.589), rgb(178, 164, 187), rgb(142, 165, 133));
+  }
+  .cards-bg {
+        background-color: rgb(209, 194, 203);
+  }
+  .table {
+        background-color: rgba(199, 169, 0, 0.301);
+  }
+  footer {
+        background-image: linear-gradient(-45deg, rgb(27, 26, 25), rgba(160, 139, 20, 0.589), rgb(86, 69, 95), rgb(142, 165, 133));
+  }
+  .btn:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+  }
+  .offcanvas {
+      transition: 1s;
+  }
+ 
+  </style>
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    
+    
+    <div class="p-5 text-black-50 text-center" id="home">
+        <h1 class="display-2 text-uppercase fw-bold">Most Common <br> Bootstrap Features</h1>
+        <button class="btn btn-dark btn-sm my-2" data-bs-toggle="collapse" data-bs-target="#firstInfo">INFO</button>
+        <div class="collapse" id="firstInfo">
+            <p> 
+                INFO: Until Navbar you can see specifications as            
+                <span class="mark text-danger">
+                    p-5, text-black-50, text-center, display-2, mark, text-uppercase, text-danger, fw-bold
+                </span> 
+            </p>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-sm navbar-light sticky-top border border-2" style="background-image: linear-gradient(-45deg, rgb(138, 101, 71), rgb(167, 152, 70), rgb(129, 94, 146), rgb(142, 165, 133));">
+        <div class="container-fluid">       
+            <a class="navbar-brand text-white" href="/index.html">Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto ">
+                    <li class="nav-item ">
+                        <a class="nav-link text-white" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#startups">Startups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#buttontable">Button-Table</a>
+                    </li>
+                </ul>                          
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn cardButtons fw-bold text-white" type="button">Search</button>
+                </form>
+                <button class="btn login mx-3 fw-bold text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#login">
+                    Login
+                </button>                
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="offcanvas offcanvas-end" id="login">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title text-white fw-bold">Login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form >
+                <div class="mb-3 mt-3">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="mb-3">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                </div>
+                <div class="form-check mb-3">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                  </label>
+                </div>
+                <button type="submit" class="btn login text-white fw-bold">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="progress mx-5 my-3" id="startups" style="height: 60px; border: 1px solid black;">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success fw-bolder " style="width:37%; height: 60px;">
+            Üretken Akademi & APY Ventures Bootcamp Süreci %37 <br> class= "progress-bar progress-bar-striped progress-bar-animated"
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4E0BAQH2-qQYgWaCqA/company-logo_200_200/0/1599831620727?e=2147483647&v=beta&t=CpUGQF721mZEOe3pUazFe2cKujvCsKb8uyKhZDzjcF0" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">   
+                        <h4 class="card-title">Virtual i</h4>
+                        <p class="card-text">Virtual i lets insurance industry see the risks. We believe EACH risk should be seen and assessed before it is insured.</p>
+                        <a href="https://www.virtualitechnologies.com/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>       
+                    </div>
+                </div>         
+            </div>
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4D0BAQEF2WxoERYNGA/company-logo_100_100/0/1574665487577?e=2147483647&v=beta&t=BlWIO6RVMZMwCT8RFHknJcGlv7JUqdHzh3IzDVbbFbU"  alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">                  
+                        <h4 class="card-title">Inooster</h4>
+                        <p class="card-text">Inooster is a software company that offers a new generation of gamification-based motivation solutions to help companies achieve their goals by increasing motivation and productivity.</p>
+                        <a href="https://inooster.com/tr/anasayfa/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>                   
+                    </div>
+                </div>         
+            </div>
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4E0BAQGoaoO3ziLMIg/company-logo_100_100/0/1600155530566?e=2147483647&v=beta&t=cqBXWsmDkVqsQDdPciDG4SqC9kQlbJ3-dS3xMPgXyB4" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Jetlexa</h4>
+                        <p class="card-text">JETLEXA is a contract lifecycle management platform that's built for everyone. JETLEXA makes it easier to buy, sell, hire and manage everything in your organization.</p>
+                        <a href="https://www.jetlexa.com/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4D0BAQFBkqkKQYedpQ/company-logo_200_200/0/1595851787694?e=2147483647&v=beta&t=TCBwMefEz8YKd1YM3H5hEgKwKml_Bx7yz9ELRsyRzfI" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Influera</h4>
+                        <p class="card-text">Yeni çağa uygun nano-influencer reklam platformu. Arzu ettiğiniz yüksek etkileşimlere organik şekilde ulaşın, en keyifli yoldan viral olun.</p>
+                        <a href="https://influera.co/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4D0BAQEDTPwZcu8HDQ/company-logo_100_100/0/1580799492433?e=2147483647&v=beta&t=d25-Q-eY3oNtpLHzuwrz66Dtnoum9C1us5GX7c0BVes" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Wask</h4>
+                        <p class="card-text">Manage Your Ads in One Place, Easily : Create new ads, manage your digital ads, reports, and digital marketing with Wask</p>
+                        <a href="https://www.wask.co/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C560BAQFcEcpqkIPPEA/company-logo_200_200/0/1610727628377?e=2147483647&v=beta&t=uRRjjWPJZiTm_JWRki29-UWo0ROMOTGXqpFW2MxmLAc" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Clotie</h4>
+                        <p class="card-text">A Brand-New Personalized Shopping Experience!</p>
+                        <a href="https://clotie.com/tr/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4D0BAQG3p9luBaUHxQ/company-logo_200_200/0/1631106580961?e=2147483647&v=beta&t=srwYEYe40ArZrCU4pfGt2Pikc1bWo28sXjfcW1ucfIs" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Syntonym</h4>
+                        <p class="card-text">Synthetic Anonymization for Privacy Protection | Leading Generative AI Startup</p>
+                        <a href="https://syntonym.com/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4E0BAQEIJB6lVTlfPw/company-logo_200_200/0/1598266184612?e=2147483647&v=beta&t=KPms1KMMx889Hu7Hstx6YmCLnrZ8G6ZQjEvxRqwewSY" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Juphy</h4>
+                        <p class="card-text">All customer communication channels — Email, Social Media, Reviews and Chat — in one place.</p>
+                        <a href="https://juphy.com/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4D0BAQEjy-R44CNJsQ/company-logo_200_200/0/1609937542613?e=2147483647&v=beta&t=0XR2F5zrrUyop6nFUCo5ux3YAP2iQDi_xrOGmrcF6TM" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">ForFarming</h4>
+                        <p class="card-text">We develop smart agriculture solutions by combining IoT, Cloud, Machine Learning, and Blockchain technologies with modern farming methods to make farming easier, more efficient, and more sustainable while increasing food safety and quality.</p>
+                        <a href="https://www.forfarming.co/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4E0BAQFeRRcM_6Qjyg/company-logo_200_200/0/1629039889214?e=2147483647&v=beta&t=97P64JHyFcOxtB7XxGkeflsQJSE5VDsIrPvskpleLZo" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Werk</h4>
+                        <p class="card-text">Remote and Hybrid collaboration toolkit to the new era</p>
+                        <a href="https://www.usewerk.com/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4D0BAQFHYIsmcRaRIQ/company-logo_200_200/0/1591012636315?e=2147483647&v=beta&t=qU8CeHR7IcUO7rGy_smRWSY5ir9jPnmXzETvJjoh5pY" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Kronnika</h4>
+                        <p class="card-text">We develop RPA robots to help you preserve your company's most valuable asset: Time!</p>
+                        <a href="https://kronnika.com/tr/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+            <div class="col-md-3 my-2 text-center">
+                <div class="card" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4D0BAQHs7oRTPWfyVA/company-logo_200_200/0/1640085187270?e=2147483647&v=beta&t=86fSvz6_JehkVMNllmlcOYUkmMNbnQTbzogCdpFAn3M" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Vomsis</h4>
+                        <p class="card-text">Banka ürünlerini tek bir panelden görüntüleme, işleme, raporlama ve aktarım hizmeti sağlayan açık bankacılık platformu</p>
+                        <a href="https://www.vomsis.com/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C560BAQH7F79UWePX-A/company-logo_200_200/0/1519881973175?e=2147483647&v=beta&t=oNiwGdZQDQZI2XMzkEne-iTXwKveqTSxxpOr52rOQJ8" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Biryudumkitap</h4>
+                        <p class="card-text">Biryudumkitap is a mobile app providing nonfiction book summaries & short stories. Learn & enjoy anywhere, anytime.</p>
+                        <a href="https://www.biryudumkitap.com/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C560BAQGIVsnuCgpGbA/company-logo_200_200/0/1645190058139?e=2147483647&v=beta&t=XERSw_s6Y8Tmeq2G1kYd0ksPo7TvxAsfrOg6bO7kNu8" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Denebunu</h4>
+                        <p class="card-text">Meet hyper-targeted sampling and ratings & reviews e-community Denebunu.</p>
+                        <a href="https://denebunu.com/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+            <div class="col-md-3 my-2">
+                <div class="card text-center" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C560BAQEcjxg3dIZeJQ/company-logo_200_200/0/1641852465826?e=2147483647&v=beta&t=lvYIP9xwiG6f7RDfWHo4eJtQ8P3aW4uiwySQn1Qka24" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Cowealthy</h4>
+                        <p class="card-text">Smart Dairy Solutions based on IOT Technology for Cattle Monitoring. Sophisticated Herd Management Tools for Dairy Farms</p>
+                        <a href="https://cowealthy.business.site/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+            <div class="col-md-3 my-2 text-center">
+                <div class="card" style="width:100%; height: 100%;">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4D0BAQHmb-LStOYXmQ/company-logo_200_200/0/1632237206436?e=2147483647&v=beta&t=F48p8PExEPyl2QpSbvExs_janID8zvsHKjnpGJ9WT_g" alt="Card image">
+                    <div class="card-body d-flex flex-column cards-bg">
+                        <h4 class="card-title">Peyk</h4>
+                        <p class="card-text">Peyk monitors your websites and creates meaningful alarms for suspicious events</p>
+                        <a href="https://www.monspark.com/" target="_blank" class="btn cardButtons mt-auto text-white">Website</a>
+                    </div>
+                </div>         
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-3" id="buttontable">
+        <div class="row border border-dark mx-0 border-2 rounded">
+            <h2>Hoverable 
+                <span class="badge bg-dark">Dark</span> 
+                Table
+            </h2>
+            <p class="lead">The .table-hover class adds a hover effect (grey background color) on table rows: you can see the buttons specifications on the table at the bottom. At the heading on top of this p used 
+                <span class="mark text-danger">badge bg-dark</span> 
+                class to give background to Dark word.
+            </p>
+        </div>            
+        <table class="table table-hover text-center text-white fw-bold my-2">
+            <thead>
+                <tr>
+                    <th>Buttons</th>
+                    <th>Class</th>
+                    <th>Specs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><button type="button" class="btn btn-primary">Primary</button></td>
+                    <td>btn btn-primary</td>
+                    <td>No Spec</td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-outline-secondary">Secondary</button></td>
+                    <td>btn btn-outline-secondary</td>
+                    <td>Button Outline</td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-success btn-lg">Success</button></td>
+                    <td>btn btn-success btn-lg</td>
+                    <td>Button Size</td>
+                </tr>
+                <tr>
+                    <td class="d-grid"><button type="button" class="btn btn-info btn-block">Info</button></td>
+                    <td>btn btn-info btn-block</td>
+                    <td>Block Level Button</td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-warning active">Warning</button></td>
+                    <td>btn btn-warning active</td>
+                    <td>Active Button</td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-danger disabled">Danger</button></td>
+                    <td>btn btn-danger disabled</td>
+                    <td>Disabled Button</td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-dark"><span class="spinner-border spinner-border-sm"></span> Loading</button></td>
+                    <td>btn btn-dark, span içinde spinner-border spinner-border-sm</td>
+                    <td>Spinner Button</td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-light"> <span class="spinner-grow spinner-grow-sm"></span>Loading</button></td>
+                    <td>btn btn-light,span içinde spinner-grow spinner-grow-sm</td>
+                    <td>Spinner Grow Button</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <ul class="pagination justify-content-center mt-3">
+        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+
+
+
+
+
+    <footer class="mt-5 bg-light">
+        <div class="container py-3 text-center text-white">
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <a class="text-white d-inline-flex align-items-center text-decoration-none mb-2 link-dark" href=""><svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg> <span class="fs-5">Bootstrap</span></a>               
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                    <h5>Links</h5>             
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Guides</h5>              
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Projects</h5>                  
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>              
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
