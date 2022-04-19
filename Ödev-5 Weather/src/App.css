@@ -1,0 +1,35 @@
+.app-body {
+  background-color: rgb(77, 78, 78);
+  min-height: 100vh;
+  text-align: center;
+  padding: 13%;
+  font-family: sans-serif;
+  color: #ff8000;
+  font-weight: 900;
+}
+.degree {
+  color: #ef4d0d;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.bg{
+  background: linear-gradient(-45deg, #da7e2293, #443c3fb3, #022d3eae, #04f8f8ac);
+  border-radius: 50px;
+  box-shadow: 20px 20px 50px;
+}
+button {
+  height: 50px;
+  box-shadow: 10px 10px 30px;
+}
+.img {
+  background-image: url("https://www.itl.cat/pngfile/big/290-2905110_seasons-wallpaper-hd.jpg");
+  margin-top: -70px;
+  font-size: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
