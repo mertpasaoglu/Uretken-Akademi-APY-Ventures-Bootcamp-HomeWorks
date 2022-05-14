@@ -1,0 +1,11 @@
+.tableheader {
+    display: flex;
+    align-items: center;
+}
+.coinimg {
+    width: 20px;
+    height: 20px;
+}
+.coinname {
+    margin-left: 10px;
+}
